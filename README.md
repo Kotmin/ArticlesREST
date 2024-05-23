@@ -13,6 +13,7 @@ Demo set up to work with in memory database
 
 
 
+
 ## Table of Contents
 
 - [Description](#description)
@@ -28,6 +29,17 @@ Demo set up to work with in memory database
 ## Description
 
 ArticlesREST API is a FastAPI-based service for managing articles with details like name, tags, dates, category, and more. This demonstration version operates on an in-memory database, making it easy to test and experiment with the API.
+
+
+
+<p>
+    <img src="https://github.com/Kotmin/ArticlesREST/assets/70173732/f6bf279b-d7e1-461b-897f-d4c45dd44bbd" alt="Proof of concept - working get articles">
+</p>
+<p align="center">
+    <em>Samle get articles response</em>
+</p>
+
+
 
 ## Features
 
@@ -109,6 +121,20 @@ To run the application using Docker, follow these steps:
 ## API Documentation
 
 The API documentation is auto-generated and can be accessed via Swagger UI at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). The OpenAPI specification is also available in YAML format at [http://127.0.0.1:8000/openapi.yaml](http://127.0.0.1:8000/openapi.yaml). You can also access JSON fortmat at [http://127.0.0.1:8000/openapi.json](http://127.0.0.1:8000/openapi.json).
+
+![obraz](https://github.com/Kotmin/ArticlesREST/assets/70173732/5ea430df-bbcd-4bbe-b507-48ff374b2c90)
+
+
+#### Parts of returned yaml
+
+
+
+![obraz](https://github.com/Kotmin/ArticlesREST/assets/70173732/b9ad361a-c274-4a08-bd6c-388c5dba53a5)
+
+![obraz](https://github.com/Kotmin/ArticlesREST/assets/70173732/caba1cbf-72c6-4b63-b427-c8feb7a4aa05)
+
+
+
 
 ## Contributing
 
