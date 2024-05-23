@@ -7,7 +7,7 @@ Demo set up to work with in memory database
 
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Kotmin/ArticlesREST/article-management-api)
-[![Build Status](https://img.shields.io/github/workflow/status/your-repo/article-management-api/CI)](https://github.com/Kotmin/ArticlesREST/article-management-api/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/Kotmin/ArticlesREST/article-management-api/CI)](https://github.com/Kotmin/ArticlesREST/article-management-api/actions)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Kotmin/ArticlesREST/article-management-api/blob/main/LICENSE)
 
 ---
@@ -46,12 +46,14 @@ Article Management API is a FastAPI-based service for managing articles with det
 
 To run the application locally, follow these steps:
 
+#### One click run (no venv)
+
 ```bash
 pip install -r requirements.txt;\
 uvicorn main:app --reload
 
 ```
-
+#### Proper way
 
 1. Clone the repository:
     ```bash
