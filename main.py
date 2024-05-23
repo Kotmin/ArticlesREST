@@ -4,7 +4,18 @@ from pydantic import BaseModel
 from datetime import datetime
 from uuid import uuid4, UUID
 
-app = FastAPI()
+
+import yaml
+from fastapi.openapi.utils import get_openapi
+from fastapi.responses import FileResponse
+import os
+
+
+app = FastAPI(
+    title="Article Management API",
+    description="API for managing articles with details like name, tags, dates, category, etc.",
+    version="1.0.0",
+)
 
 # Pydantic models
 class Article(BaseModel):
@@ -53,3 +64,26 @@ def delete_article(article_id: UUID):
             del db[index]
             return {"message": "Article deleted successfully"}
     raise HTTPException(status_code=404, detail="Article not found")
+
+
+
+
+# Generate OpenAPI YAML file
+def generate_openapi_yaml():
+    openapi_schema = get_openapi(
+        title=app.title,
+        version=app.version,
+        description=app.description,
+        routes=app.routes,
+    )
+    with open("openapi.yaml", "w") as f:
+        yaml.dump(openapi_schema, f, default_flow_style=False)
+
+generate_openapi_yaml()
+
+@app.get("/openapi.yaml", include_in_schema=False)
+def get_openapi_yaml():
+    file_path = "openapi.yaml"
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+    raise HTTPException(status_code=404, detail="OpenAPI YAML file not found")
