@@ -1,5 +1,5 @@
 # ArticlesREST
-## API for managing articles with details like name, tags, dates, category, etc.
+## API for managing articles and blog posts.
 
 Demo set up to work with in memory database
 
@@ -27,12 +27,11 @@ Demo set up to work with in memory database
 
 ## Description
 
-Article Management API is a FastAPI-based service for managing articles with details like name, tags, dates, category, and more. This demonstration version operates on an in-memory database, making it easy to test and experiment with the API.
+ArticlesREST API is a FastAPI-based service for managing articles with details like name, tags, dates, category, and more. This demonstration version operates on an in-memory database, making it easy to test and experiment with the API.
 
 ## Features
 
 - CRUD operations for Articles
-- CRUD operations for Categories and Attributes
 - Auto-generated documentation with OpenAPI and Swagger UI
 - In-memory database for demonstration purposes
 
