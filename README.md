@@ -103,12 +103,12 @@ To run the application using Docker, follow these steps:
 
 2. Build the Docker image:
     ```bash
-    docker build -t ArticlesREST .
+    docker build -t articlesrest .
     ```
 
 3. Run the Docker container:
     ```bash
-    docker run -d -p 8000:8000 ArticlesREST
+    docker run -d -p 8000:8000 articlesrest
     ```
 
 4. Access the API documentation:
